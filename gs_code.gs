@@ -1,3 +1,11 @@
+var doGet = (request) => {
+  return HtmlService.createTemplateFromFile('html').evaluate();
+}
+
+var include = (filename) => {
+  return HtmlService.createHtmlOutputFromFile(filename).getContent();
+}
+
 function updateData(){
   var rowCount = getRowCount()
   for (var row = 6; row < rowCount + 6; row++){
